@@ -1,0 +1,17 @@
+{
+    "name": "kuroxray/k-module-test",
+    "license": "GPU",
+    "autoload": {
+        "psr-4": {
+            "KLibPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mazzola gino",
+            "email": "kuro.azeus@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

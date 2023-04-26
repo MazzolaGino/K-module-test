@@ -1,0 +1,47 @@
+{
+	"plugin": "k-module-test",
+	
+	"scripts": [
+	    "publish.js"
+	],
+	"classes" : [
+	    "../vendor/autoload"
+	],
+	"processor_namespace": "KLibPlugin\\Processor\\",
+	"processors" : [
+	    "ShareProcessor",
+		"DashboardProcessor"
+	],
+    "controller_namespace": "KLibPlugin\\Controller\\",
+
+  	"controllers": [
+        {
+            "name": "home",
+            "class": "HomeController",
+            "type": "admin",
+            "actions": {
+                "index": "MVC Home"
+            }
+        },
+        {
+            "name": "share",
+            "class": "ShareController",
+            "type": "admin",
+            "actions": {
+                "index": "MVC Share Configuration"
+            }
+        }
+    ],
+
+    "share_options": [
+        "tw_account_id",
+        "tw_consumer_key",
+        "tw_consumer_secret",
+        "tw_bearer_token",
+        "tw_access_token",
+        "tw_access_token_secret",
+        "fb_access_token",
+        "fb_feed_url",
+        "dc_webhook_url"
+    ]
+}

@@ -7,45 +7,18 @@
  * Author: Mazzola Gino
  * Author URI: https://jrpgfr.net
  */
+
 $autoloaderFile = __DIR__ . '/../k-module/vendor/autoload.php';
+
+define('KLIB_WP_PLUGIN_DIR', WP_PLUGIN_DIR.'/K-module-test/src/');
+define('KLIB_WP_PLUGIN_URL', WP_PLUGIN_URL.'/K-module-test/src/');
+
 
 if (file_exists($autoloaderFile)) {
     require_once ($autoloaderFile);
 }
 
-use KLib\AppBuilder;
-
-class TestBuilder extends AppBuilder
-{
-    /**
-     *
-     * @var TestBuilder
-     */
-    private static $instance;
-
-    /**
-     * Constructeur privé pour empêcher l'instanciation externe de la classe
-     */
-    private function __construct()
-    {
-        parent::__construct(plugin_dir_path(__FILE__), plugin_dir_url(__FILE__));
-    }
-
-    /**
-     *
-     * @return TestBuilder
-     */
-    public static function getInstance(): TestBuilder
-    {
-        if (is_null(self::$instance)) {
-            self::$instance = new TestBuilder();
-        }
-
-        return self::$instance;
-    }
-}
-
-TestBuilder::getInstance()->getApp()->execute();
+(new \KLib\AppBuilder(KLIB_WP_PLUGIN_DIR, KLIB_WP_PLUGIN_URL))->getApp()->on();
 
 
 

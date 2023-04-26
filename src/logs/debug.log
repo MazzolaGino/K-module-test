@@ -1,0 +1,38 @@
+[2023-04-26 00:22:05][alert] {"error":{"message":"The url you supplied is invalid","type":"OAuthException","code":1500,"error_subcode":1611248,"is_transient":false,"error_user_title":"URL non valide","error_user_msg":"\u00c9chec lors de l\u2019analyse de l\u2019URL","fbtrace_id":"A1Lvfg5605xSQiWaBqB0dUY"}}
+[2023-04-26 00:22:05][error] 
+[2023-04-26 00:22:05][alert] stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [edit_history_tweet_ids] => Array
+                (
+                    [0] => 1651018778115751941
+                )
+
+            [id] => 1651018778115751941
+            [text] => qsdqsdsqdsqdqsd http://localhost:8080/?p=6
+        )
+
+)
+
+[2023-04-26 00:22:06][alert] 
+[2023-04-26 00:22:06][error] 
+[2023-04-26 17:41:46][alert] {"error":{"message":"The url you supplied is invalid","type":"OAuthException","code":1500,"error_subcode":1611248,"is_transient":false,"error_user_title":"URL non valide","error_user_msg":"\u00c9chec lors de l\u2019analyse de l\u2019URL","fbtrace_id":"AQW56Lo32v0HDMihOO4KH3S"}}
+[2023-04-26 17:41:46][error] 
+[2023-04-26 17:41:47][alert] stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [edit_history_tweet_ids] => Array
+                (
+                    [0] => 1651280424604254217
+                )
+
+            [id] => 1651280424604254217
+            [text] => qsdqsdqs http://localhost:8080/?p=10
+        )
+
+)
+
+[2023-04-26 17:41:48][alert] 
+[2023-04-26 17:41:48][error] 
