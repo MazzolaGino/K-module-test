@@ -3,7 +3,7 @@
 /**
  * Plugin Name: K Module Test
  * Description: K Module
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Mazzola Gino
  * Author URI: https://jrpgfr.net
  */
