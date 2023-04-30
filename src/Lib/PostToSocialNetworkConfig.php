@@ -32,8 +32,8 @@ class PostToSocialNetworkConfig
             'dc_webhook_url' => get_option('dc_webhook_url'),
 
             // SWITCH
-            'authorize_discord' => true,
-            'authorize_facebook' => true,
+            'authorize_discord' => false,
+            'authorize_facebook' => false,
             'authorize_twitter' => true,
 
             // CLASS LOADIND
