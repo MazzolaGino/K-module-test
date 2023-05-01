@@ -44,8 +44,10 @@ class ShareProcessor extends Processor
     /**
      *
      * @hook add_meta_boxes
+     * @priority 10
+     * @args 2
      */
-    public function shareDisplayCustomPosts_processor($post)
+    public function shareDisplayCustomPosts_processor($post_type, $post)
     {
         add_meta_box('champs_personnalises', 'Textes pour les réseaux sociaux', [
             $this,
@@ -80,9 +82,12 @@ class ShareProcessor extends Processor
 
     /**
      *
+     * @action add_action
      * @hook save_post
+     * @priority 10
+     * @args 1
      */
-    public function shareSaveCustomPosts_processor($post_id)
+    public function sharesave_processor($id)
     {
         $fields = [
             'texte_twitter',
@@ -93,7 +98,7 @@ class ShareProcessor extends Processor
         foreach ($fields as $field) {
             if (array_key_exists($field, $_POST)) {
                 try {
-                    update_post_meta($post_id, $field, $_POST[$field]);
+                    update_post_meta($id, $field, $_POST[$field]);
                 } catch (\Exception $e) {
                     // Handle the exception as appropriate
                 }
