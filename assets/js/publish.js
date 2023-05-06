@@ -23,16 +23,16 @@ class SharePostPublishing {
             }
         });
 
-        document.getElementById('texte_twitter').addEventListener('input', function () {
-            param.evaluate('texte_twitter');
+        document.getElementById('texte_twitter').addEventListener('keydown', function () {
+            param.evaluate();
         });
 
-        document.getElementById('texte_facebook').addEventListener('input', function () {
-            param.evaluate('texte_facebook');
+        document.getElementById('texte_facebook').addEventListener('keydown', function () {
+            param.evaluate();
         });
 
-        document.getElementById('texte_discord').addEventListener('input', function () {
-            param.evaluate('texte_discord');
+        document.getElementById('texte_discord').addEventListener('keydown', function () {
+            param.evaluate();
         });
 
     }
@@ -57,15 +57,21 @@ class SharePostPublishing {
     }
 
     can() {
-        return document.getElementById('texte_twitter').value !== ''
+        
+        var ok = document.getElementById('texte_twitter').value !== ''
             && document.getElementById('texte_facebook').value !== ''
-            && document.getElementById('texte_discord').value !== ''
+            && document.getElementById('texte_discord').value !== '';
+
+        console.log('tu peux publier ?' + ok);
+
+        return ok;
     }
 
-    evaluate(name) {
-        if (document.getElementById(name).innerHTML === "") {
-            this.deactivate();
-        } else if (this.can()) {
+    evaluate() {
+
+        console.log(this.can());
+
+        if (this.can()) {
             this.activate();
         } else {
             this.deactivate();
